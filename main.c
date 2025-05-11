@@ -73,3 +73,33 @@ int atirar(int tiro[2], int tabuleiro[5][5]){
         return 1;  //retorno em caso de coordenada repetida;
     }
 }
+
+//funcao para as dicas:
+int dica(int tiro[2], int tabuleiro[5][5]){
+    int linha=tiro[0];
+    int coluna=tiro[1];
+    int naviosNaLinha=0;
+    int naviosNaColuna=0;
+    //checa se ha navios na mesma coluna do ultimo tiro:
+    for(int i=0; i<5; i++){
+        if (tabuleiro[i][coluna]==9){
+            naviosNaColuna++;
+        }
+    }
+    //checa se ha navios na mesma linha do ultimo tiro:
+    for(int j=0; j<5; j++){
+        if (tabuleiro[linha][j]==9){
+            naviosNaLinha++;
+        }
+    }
+
+    if(naviosNaLinha==0 && naviosNaColuna==0){  
+        return 0;
+    }else if (naviosNaLinha>0 && naviosNaColuna>0){
+        printf("DICA: Ha %d navio(s) na mesma linha e %d navio(s) na mesma coluna! :)\n", naviosNaLinha , naviosNaColuna);
+    } else if (naviosNaLinha>0 && naviosNaColuna==0){
+        printf("DICA: Ha %d navio(s) na mesma linha. :)\n", naviosNaLinha);
+    } else if (naviosNaLinha==0 && naviosNaColuna>0){
+        printf("DICA: Ha %d navio(s) na mesma coluna. :)\n", naviosNaColuna);
+    }
+}
