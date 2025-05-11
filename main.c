@@ -103,3 +103,29 @@ int dica(int tiro[2], int tabuleiro[5][5]){
         printf("DICA: Ha %d navio(s) na mesma coluna. :)\n", naviosNaColuna);
     }
 }
+
+//funcao principal:
+int main(){
+    //variaveis:
+    int tabuleiro[5][5];
+    int tiro[2];
+    int tentativas=0;
+    int navios=3;
+
+    printf("Batalha Naval: 1 jogador\n");
+    printf("Encontre os %d navios que foram posicionados aleatoriamente no tabuleiro.\n", navios);
+    printf("Para atirar, digite a linha e a coluna da posicao desejada:\n");
+
+    iniciarTabuleiro(tabuleiro);
+    posicionarNavios(tabuleiro);
+
+    do{
+        exibirTabuleiro(tabuleiro);
+        
+        tentativas++;
+
+    }while(navios!=0);
+
+    printf("\nParabens! Voce destruiu todos os navios em %d tentativas!\n", tentativas);
+    return 0;
+}
