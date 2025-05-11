@@ -121,7 +121,19 @@ int main(){
 
     do{
         exibirTabuleiro(tabuleiro);
-        
+        int resultado=atirar(tiro, tabuleiro);
+        if(resultado==-1){
+            printf("Coordenadas invalidas!\n");
+        } else if(resultado==2){
+            navios--;
+            printf("Acertou um navio!\n");
+            printf("Resta: %d navio(s).\n", navios);
+        } else if(resultado==0){
+            printf("Errou!\n");
+            dica(tiro, tabuleiro);
+        } else if(resultado==1){
+            printf("Voce ja atirou nessa coordenada!\n");
+        }
         tentativas++;
 
     }while(navios!=0);
