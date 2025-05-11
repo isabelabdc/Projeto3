@@ -46,3 +46,30 @@ void posicionarNavios(int tabuleiro[5][5]){
         }
     }
 }
+
+//funcao de atirar e checar o tiro:
+int atirar(int tiro[2], int tabuleiro[5][5]){
+    //le a linha digitada:
+    printf("Linha: ");
+    scanf("%d", &tiro[0]);
+    tiro[0]--;
+    int linha=tiro[0];
+    //le a coluna digitada:
+    printf("Coluna: ");
+    scanf("%d", &tiro[1]);
+    tiro[1]--;
+    int coluna=tiro[1];
+
+    //checa o tiro:
+    if(linha<0||linha>=5||coluna<0||coluna>=5){
+        return -1;  //retorno caso a coordenada seja invalida;
+    } else if(tabuleiro[linha][coluna]==9){
+        tabuleiro[linha][coluna]=2;  //atualiza o tabuleiro;
+        return 2;  //retorno em caso de acerto;
+    } else if(tabuleiro[linha][coluna]==1){
+        tabuleiro[linha][coluna]=0;  //atualiza o tabuleiro;
+        return 0;  //retorno em caso de erro;
+    } else{
+        return 1;  //retorno em caso de coordenada repetida;
+    }
+}
