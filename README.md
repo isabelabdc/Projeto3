@@ -16,8 +16,11 @@ utilizada anteriormente. O jogo também pode fornecer dicas sobre a quantidade d
 escolhida. O progresso da partida é visualizado por meio das marcações no tabuleiro: 
 
 -- '~' representa água;
+
 -- 'X' representa um acerto;
+
 -- '*' representa um erro;
+
 
 Esses símbolos permitem o acompanhamento dos resultados dos disparos
 ao longo das tentativas. O objetivo final é destruir
