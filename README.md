@@ -8,6 +8,7 @@ Gustavo Runge Passarelli
 R.A:  52.224.004-3;
 
 Objetivo:
+
 O jogo desenvolvido tem como objetivo simular uma versão simplificada de Batalha Naval, onde o jogador deve encontrar e 
 destruir três navios escondidos em um tabuleiro 5x5. Cada partida é iniciada com os navios posicionados aleatoriamente no 
 tabuleiro, e o jogador deve tentar acertar suas localizações por meio de coordenadas numéricas. A cada rodada, o usuário 
